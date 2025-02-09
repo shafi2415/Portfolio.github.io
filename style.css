@@ -232,18 +232,17 @@ section.active {
 
 .home-img .img-box::before,
 .home-img .img-box::after {
-    content: '';
+    content:'';
     position: absolute;
     width: 50rem;
     height: 50rem;
-    background: conic-gradient(transparent, transparent, transparent  var(--main-color));
+    background: conic-gradient(transparent, transparent, transparent, var(--main-color));
     transform: rotate(0deg);
-    animation: rotate-border 10s linear infinite;
-    
+    animation: rotate-border 5s linear infinite;
 }
 
 .home-img .img-box::after {
-    animation-delay: -5s;
+    animation-delay: -2.5s;
 }
 
 @keyframes rotate-border {
@@ -251,6 +250,7 @@ section.active {
         transform: rotate(360deg);
     }
 }
+
 .home-img .img-box .img-item {
     position: relative;
     width: 100%;
@@ -260,7 +260,7 @@ section.active {
     border: .01rem solid var(--background-color);
     display: flex;
     justify-content: center;
-    z-index: 1;
+    z-index: 2;
     overflow: hidden;
 }
 
@@ -272,7 +272,6 @@ section.active {
     object-fit: cover;
     mix-blend-mode: lighten;
 }
-
 .bars-box {
     position: absolute;
     width: 100%;
