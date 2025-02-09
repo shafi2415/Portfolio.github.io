@@ -9,7 +9,8 @@ const activePage = () => {
     // Hide all sections immediately
     sections.forEach(section => {
         section.classList.remove('active');
-        section.style.display = 'none';  // Ensure sections are hidden
+        section.style.visibility = 'hidden'; // Ensure sections are hidden
+        section.style.opacity = '0';
     });
 
     // Handle header animation
@@ -39,9 +40,11 @@ navLinks.forEach((link, idx) => {
             // Show new section after delay
             setTimeout(() => {
                 sections.forEach(section => {
-                    section.style.display = 'none';  // Ensure all sections are hidden
+                    section.style.visibility = 'hidden'; // Ensure all sections are hidden
+                    section.style.opacity = '0';
                 });
-                sections[idx].style.display = 'block';  // Show selected section
+                sections[idx].style.visibility = 'visible'; // Show selected section
+                sections[idx].style.opacity = '1';
                 sections[idx].classList.add('active');
             }, 1100);
         }
@@ -55,9 +58,11 @@ logoLink.addEventListener('click', () => {
 
         setTimeout(() => {
             sections.forEach(section => {
-                section.style.display = 'none';
+                section.style.visibility = 'hidden';
+                section.style.opacity = '0';
             });
-            sections[0].style.display = 'block';
+            sections[0].style.visibility = 'visible';
+            sections[0].style.opacity = '1';
             sections[0].classList.add('active');
         }, 1100);
     }
@@ -110,7 +115,7 @@ arrowRight.addEventListener('click', () => {
 });
 
 arrowLeft.addEventListener('click', () => {
-    if (index > 1) {
+    if (index > 0) {
         index--;
         arrowRight.classList.remove('disabled');
     } else {
