@@ -43,8 +43,6 @@ navLinks.forEach((link, idx) => {
                     section.style.visibility = 'hidden'; // Ensure all sections are hidden
                     section.style.opacity = '0';
                 });
-                sections[idx].style.visibility = 'visible'; // Show selected section
-                sections[idx].style.opacity = '1';
                 sections[idx].classList.add('active');
             }, 1100);
         }
@@ -61,8 +59,6 @@ logoLink.addEventListener('click', () => {
                 section.style.visibility = 'hidden';
                 section.style.opacity = '0';
             });
-            sections[0].style.visibility = 'visible';
-            sections[0].style.opacity = '1';
             sections[0].classList.add('active');
         }, 1100);
     }
