@@ -14,12 +14,12 @@
   --main-color: #02ffe6;
   --background-color: #051f1b;
   --secondary-background: #373c47;
-  --white-color: #fff;
+  --white-color: #ebffff;
   --yellow-color: #f2f54a;
   --disabled-color: #242e03d0;
-  --animation-timing: 0.5s;
+  --animation-timing: 20s;
   --border-radius: 0.8rem;
-  --transition-timing: 0.3s;
+  --transition-timing: 10s;
 }
 
 html {
@@ -102,9 +102,8 @@ section {
 }
 
 section.active {
-    visibility: visible;
-    opacity: 1;
-    overflow: auto;
+    animation: show-content 1.5s linear forwards;
+    animation-delay: 1.6s;
 }
 
 @keyframes show-content {
@@ -272,6 +271,7 @@ section.active {
     object-fit: cover;
     mix-blend-mode: lighten;
 }
+
 .bars-box {
     position: absolute;
     width: 100%;
@@ -284,7 +284,7 @@ section.active {
     width: 100%;
     height: 100%;
     background: var(--background-color);
-    animation: hide-bars .2s ease-in-out both;
+    animation: hide-bars .5s ease-in-out both;
     animation-delay:  calc(.1s * var(--i));
 }
 
@@ -298,7 +298,7 @@ section.active {
 }
 
 .bars-box.active .bar{
-    animation: show-bars .2s ease-in-out both;
+    animation: show-bars .5s ease-in-out both;
     animation-delay:  calc(.1s * var(--i));
     background: var(--background-color);
 }
@@ -902,4 +902,3 @@ section.active {
         font-size: 3.5rem;
     }
 }
-
