@@ -839,12 +839,7 @@ section.active {
         width: 35rem;
         height: 35rem;
     }
-    .home-detail .btn {
-        display: inline-block;
-        width: 100%;
-        text-align: center;
-    }
-
+  
     .resume-container,
     .portfolio-container,
     .contact-container {
