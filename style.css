@@ -839,6 +839,11 @@ section.active {
         width: 35rem;
         height: 35rem;
     }
+    .home-detail .btn {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+    }
 
     .resume-container,
     .portfolio-container,
@@ -900,11 +905,5 @@ section.active {
 
     .contact-box h2 {
         font-size: 3.5rem;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .home-detail .btn {
-        display: inline-block;
     }
 }
