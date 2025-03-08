@@ -7,7 +7,6 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
-    <script src="https://api.web3forms.com/submit" method="POST"></script>
 </head>
 
 <body>
@@ -480,10 +479,9 @@
                 </div>
             </div>
                     <div class="contact-box">
-                        <form action="">
+                        <form onsubmit="sendEmail(); reset(); return false;">
                             <h2 class="heading">Contact <span>Me!</span></h2>
                             <div class="field-box">
-                                <input type="hidden" name="access_key" value="271de16b-6dca-40f9-8db5-29464ac11d61">
                                 <input type="text" placeholder="Full Name" required>
                                 <input type="email" placeholder="Email Address" required>
                                 <input type="text" placeholder="Phone Number" required>
@@ -499,5 +497,21 @@
 
 <!-- custom js -->   
     <script src="scipt.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+                Host : "smtp.gmail.com",
+                Username : "shafisayd2415@gmail.com",
+                Password : "Shafi@786",
+                To : 'mshafisyd@gmail.com',
+                From : document.getElementById("email").value,
+                Subject : "New Enquiry",
+                Body : "And this is the body"
+        }).then(
+        message => alert(message)
+        );
+     }
+    </script>
 </body>
 </html>
