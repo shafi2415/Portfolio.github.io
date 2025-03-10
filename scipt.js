@@ -142,9 +142,7 @@ function sendEmail() {
     const bodyMessage = `Full Name: ${fullName.value}<br> Email: ${email.value}<br> Phone Number: ${phone.value}<br> Message: ${mess.value}`;
     
     Email.send({
-        Host : "smtp.gmail.com",
-        Username : "shafisayd2415@gmail.com",
-        Password : "Shafi@2415",
+        SecureToken : "C973D7AD-F097-4B95-91F4-40ABC5567812",
         To : 'mshafisyd@gmail.com',
         From : "shafisayd2415@gmail.com",
         Subject : subject.value,
