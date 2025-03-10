@@ -142,7 +142,7 @@ function sendEmail() {
     const bodyMessage = `Full Name: ${fullName.value}<br> Email: ${email.value}<br> Phone Number: ${phone.value}<br> Message: ${mess.value}`;
     
     Email.send({
-        Host: "httpa://smtp.elasticemail.com",
+        Host: "https://my.smtphosting.com/aff.php?aff=7",
         Username: "shafisayd2415@gmail.com",
         Password:"8986DE9506B736D3A951DA558C6047D6181F",
         To : 'shafisayd2415@gmail.com',
