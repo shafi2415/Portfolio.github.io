@@ -137,25 +137,18 @@ const email = document.getElementById("email");
 const phone = document.getElementById("phone");
 const subject = document.getElementById("subject");
 const mess = document.getElementById("message");
-
-function sendEmail() {
-    const bodyMessage = `Full Name: ${fullName.value}<br> Email: ${email.value}<br> Phone Number: ${phone.value}<br> Message: ${mess.value}`;
-    
-    Email.send({
-        Host: "s1.maildns.net",
-        Username: "shafisayd2415@gmail.com",
-        Password:"8986DE9506B736D3A951DA558C6047D6181F",
-        To : 'shafisayd2415@gmail.com',
-        From : "shafisayd2415@gmail.com",
-        Subject : subject.value,
-        Body : bodyMessage
-    }).then(
-      message => alert(message)
-    );
+// script.js
+function sendMail() {
+    var params = {
+        from_name : document.getElementById("fullName").value,
+        email_id : document.getElementById("email_id").value,
+        phone : document.getElementById("phone").value,
+        subject : document.getElementById("subject").value,
+        message : document.getElementById("message").value
+    }
+    emailjs.send("service_2po6r4l", "template_erbkbrj", params).then(function (res) {
+        alert("success! " + res.status);
+    })
 }
 
-form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    
-    sendEmail();
-});
+
