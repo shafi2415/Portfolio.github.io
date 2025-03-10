@@ -136,19 +136,17 @@ const fullName = document.getElementById("name");
 const email = document.getElementById("email");
 const phone = document.getElementById("phone");
 const subject = document.getElementById("subject");
-const mess = document.getElementById("message");
+const message = document.getElementById("message");
 // script.js
 function sendMail() {
     var params = {
         from_name : document.getElementById("fullName").value,
         email_id : document.getElementById("email_id").value,
-        phone : document.getElementById("phone").value,
-        subject : document.getElementById("subject").value,
         message : document.getElementById("message").value
     }
     emailjs.send("service_2po6r4l", "template_erbkbrj", params).then(function (res) {
         alert("success! " + res.status);
     })
-}
+};
 
 
