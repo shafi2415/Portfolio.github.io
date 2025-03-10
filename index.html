@@ -488,7 +488,7 @@
                                 <input type="text" placeholder="Email Subject" id="subject" required>
                                 <textarea name="" id="message" placeholder="Your Message" required></textarea>
                     </div>
-                    <button type="submit" class="btn">Send Message</button>
+                    <button onclick="sendMail()" type="submit" class="btn">Send Message</button>
                 </form>
             </div>
         </div>
@@ -496,7 +496,14 @@
 </section>
 
 <!-- custom js -->   
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init({
+              publicKey: "uydFKO3Cx_jdRF83r",
+            });
+        })();
+    </script>
     <script src="scipt.js"></script>
 </body>
 </html>
