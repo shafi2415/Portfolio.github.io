@@ -143,8 +143,8 @@ function sendEmail() {
     
     Email.send({
         SecureToken : "874de908-c9fd-49a0-87e9-ae77cc93545b",
-        To : 'mshafisyd@gmail.com',
-        From : "shafisayd2415@gmail.com",
+        To : 'shafisayd2415@gmail.com',
+        From : email.value,
         Subject : subject.value,
         Body : bodyMessage
     }).then(
